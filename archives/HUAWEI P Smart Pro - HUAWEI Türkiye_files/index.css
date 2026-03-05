@@ -1,0 +1,1937 @@
+.main-page img {
+    width: 100%;
+}
+
+.main-page sub {
+    vertical-align: baseline;
+}
+
+.main-page sup {
+    font-size: 0.65em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+.main-page sup a {
+    color: inherit;
+}
+
+.main-page {
+    background-color: #edf3ff;
+}
+
+.main-page sup a:hover {
+    color: #d20a2c !important;
+}
+
+.sectionPadding {
+    padding-bottom: 10.4vw !important;
+}
+
+.contentMargin {
+    margin-top: 3.125vw !important;
+}
+
+.text-container {
+    width: 71vw;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+}
+
+.main-page .title {
+    font-size: 3.125vw;
+    font-weight: bold;
+    line-height: 1.15;
+    color: #1e1e1e;
+    /* -webkit-text-stroke: .5px #1e1e1e; */
+}
+
+.main-page .text {
+    font-size: 1.25vw;
+    line-height: 2.08vw;
+}
+
+.text-container-outer {
+    width: 71vw;
+    margin: 0 auto;
+    position: absolute;
+    top: 43%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 3;
+}
+
+.text-container-col .text {
+    margin-top: 3.125vw;
+}
+
+.text-container h2.title {
+    width: 50%;
+}
+
+.text-container p.text {
+    width: 50%;
+    color: #1e1e1e;
+}
+
+@media (max-width: 640px),
+(max-width: 1200px) and (max-aspect-ratio: 1/1) {
+    .main-page .pc {
+        display: none !important;
+    }
+    .sectionPadding {
+        padding-bottom: 20vw !important;
+    }
+    .contentMargin {
+        margin-top: 6.67vw !important;
+    }
+    .text-container {
+        width: 84vw;
+        display: block;
+    }
+    .main-page .title {
+        font-size: 8vw;
+    }
+    .main-page .text {
+        font-size: 4.26vw;
+        line-height: 6vw;
+    }
+    .text-container h2.title {
+        width: 100%;
+    }
+    .text-container p.text {
+        width: 100%;
+        margin-top: 4vw;
+    }
+    .text-container-col .text {
+        margin-top: 4vw;
+    }
+    .text-container-outer {
+        position: unset;
+        -webkit-transform: none;
+        transform: none;
+        width: 84vw;
+    }
+}
+
+.main-page .nowrap {
+    white-space: nowrap;
+}
+
+.main-page .container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.stark-kv .container {
+    background-color: #fff;
+    padding: 6.71vw 0 3vw;
+}
+
+.stark-kv .kv-img {
+    width: 60vw;
+    margin-left: 10.4vw;
+}
+
+.stark-kv .kv-slogan {
+    position: absolute;
+    top: 41%;
+    right: 14.4vw;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.stark-kv .kv-name {
+    width: 20vw;
+    margin: 0 auto;
+}
+
+.stark-kv .kv-text {
+    font-size: 1.45vw;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.stark-kv .kv-slogan sup {
+    font-size: 1em;
+    position: relative;
+    top: 0.1em;
+}
+
+.kv-note {
+    width: 71vw;
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin-top: 4vw;
+}
+
+.kv-note p {
+    width: 50%;
+    color: #a2a2a2;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: .01vw;
+}
+
+@media (max-width: 640px),
+(max-width: 1200px) and (max-aspect-ratio: 1/1) {
+    .stark-kv .container {
+        padding: 0 0 10vw;
+    }
+    .kv-note {
+        width: 84vw;
+        margin-top: 6.67vw;
+    }
+    .kv-note p {
+        width: 100%;
+    }
+    .stark-kv .kv-img {
+        width: 100%;
+        margin: 0;
+    }
+    .stark-kv .kv-slogan {
+        position: unset;
+        padding-top: 11vw;
+        -webkit-transform: none;
+        transform: none;
+    }
+    .stark-kv .kv-name {
+        width: 36vw;
+    }
+    .stark-kv .kv-text {
+        font-size: 4.267vw;
+    }
+}
+
+.stark-display {
+    padding: 4.16vw 0 6.25vw;
+    background-image: url(/web/20201123122233im_/https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/huawei-p-smart-pro/img/pc/huawei-p-smart-pro-fullview-display-bg-pc.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 10.4vw;
+}
+
+.stark-display .info-img {
+    width: 68.4vw;
+    margin: 0 auto;
+}
+
+@media (max-width: 640px),
+(max-width: 1200px) and (max-aspect-ratio: 1/1) {
+    .stark-display {
+        padding: 9.3vw 0 10.6vw;
+        background-image: url(/web/20201123122233im_/https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/huawei-p-smart-pro/img/mob/huawei-p-smart-pro-fullview-display-bg-mob.jpg);
+        margin-bottom: 20vw;
+    }
+    .stark-display .info-img {
+        width: 48.4vw;
+    }
+}
+
+#art-swiper-outer {
+    width: 71vw;
+    margin: 0 auto;
+    position: relative;
+}
+
+.swiper-art {
+    border-radius: 1.56vw;
+}
+
+.slide-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    font-size: 0;
+    opacity: 0;
+}
+
+.slide-title li {
+    display: inline-block;
+    font-size: 1.66vw;
+    width: 50%;
+}
+
+.slide-title:nth-of-type(1) {
+    bottom: 3.6vw;
+    color: #fff;
+}
+
+.slide-title:nth-of-type(1) li:first-child {
+    width: 47%;
+}
+
+.slide-title:nth-of-type(1) li:nth-child(2) {
+    width: 36%;
+    margin-left: 17%;
+}
+
+.slide-title:nth-of-type(2) {
+    bottom: 1.56vw;
+    color: #1e1e1e;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background: none !important;
+    margin-top: 0 !important;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 1.71vw !important;
+    height: 3.38vw !important;
+    outline: none;
+}
+
+.swiper-button-prev {
+    left: 1.25vw !important;
+    right: auto !important;
+}
+
+.swiper-button-next {
+    left: auto !important;
+    right: 1.25vw !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: '' !important;
+}
+
+@-webkit-keyframes titleShow {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes titleShow {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.slide-title.active {
+    animation: titleShow 1s 1s forwards;
+}
+
+@media (max-width: 640px),
+(max-width: 1200px) and (max-aspect-ratio: 1/1) {
+    #art-swiper-outer {
+        width: 92vw;
+    }
+    .swiper-art {
+        border-radius: 4vw;
+    }
+    .slide-title {
+        bottom: 6vw !important;
+    }
+    .slide-title li {
+        font-size: 4.26vw;
+        width: 100% !important;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 4.4vw !important;
+        height: 8.66vw !important;
+    }
+    .swiper-button-prev {
+        left: 2vw !important;
+    }
+    .swiper-button-next {
+        right: 2vw !important;
+    }
+}
+
+.stark-fingerprint .text-container-col {
+    width: 27.6vw;
+}
+
+.stark-fingerprint .info-img {
+    width: 53.22vw;
+    margin: 0 0 0 auto;
+}
+
+@media (max-width: 640px),
+(max-width: 1200px) and (max-aspect-ratio: 1/1) {
+    .stark-fingerprint .text-container-col {
+        width: 100%;
+    }
+    .stark-fingerprint .info-img {
+        width: 100%;
+        margin-top: 6.67vw;
+    }
+}
+
+.stark-triple .text-container-col {
+    width: 25vw;
+    -webkit-transform: translate3d(35%, 0, 0);
+    transform: translate3d(35%, 0, 0);
+    -webkit-transition: all 0.7s cubic-bezier(0.88, 0.11, 0.31, 1);
+    transition: all 0.7s cubic-bezier(0.88, 0.11, 0.31, 1);
+}
+
+.stark-triple .title a {
+    /* -webkit-text-stroke: .5px #1e1e1e; */
+    font-weight: bold;
+}
+
+.stark-triple .animate-container-outer {
+    width: 71vw;
+    margin: 0 auto;
+    position: relative;
+}
+
+.stark-triple .phone-animate {
+    position: relative;
+    width: 50vw;
+    margin: 0 0 0 auto;
+    z-index: 2;
+}
+
+.stark-triple .phone-animate::before {
+    content: "";
+    display: block;
+    padding-top: 44.27vw;
+}
+
+.stark-triple .phone-mask {
+    position: absolute;
+    overflow: hidden;
+    top: 4%;
+    bottom: 18%;
+    left: 31%;
+    right: 16%;
+    border-radius: 6.25vw;
+    animation: phoneMaskClose1 0.7s cubic-bezier(0.88, 0.11, 0.31, 1) forwards, phoneMaskClose2 1s cubic-bezier(0.88, 0.11, 0.31, 1) 1.5s forwards;
+    /* -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden; */
+    -webkit-transform: rotate(0.1deg) translateZ(0);
+    -moz-transform: rotate(0.1deg) translateZ(0);
+    transform: rotate(0.1deg) translateZ(0);
+}
+
+.stark-triple .bg-animate {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.stark-triple .phone-bg {
+    width: 50vw;
+    height: 44.27vw;
+    background-color: #c1eafb;
+    border-radius: 1vw;
+    -webkit-transform: translate(14.5vw, 101%);
+    transform: translate(14.5vw, 101%);
+    animation: phoneBgClose 0.7s cubic-bezier(0.88, 0.11, 0.31, 1) forwards;
+}
+
+_:-ms-lang(x),
+.stark-triple .phone-bg {
+    animation: phoneBgIEClose 0.7s cubic-bezier(0.88, 0.11, 0.31, 1) forwards;
+}
+
+.stark-triple .phone-img {
+    background-image: url(/web/20201123122233im_/https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/huawei-p-smart-pro/img/pc/huawei-p-smart-pro-48mp-camera-pc@3x.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 36.67vw;
+    height: 38.75vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -webkit-transform: translate(127%, -22%) scale(4);
+    transform: translate(127%, -22%) scale(4);
+    animation: phoneImgClose1 0.7s cubic-bezier(0.88, 0.11, 0.31, 1) forwards, phoneImgClose2 1s cubic-bezier(0.88, 0.11, 0.31, 1) 1.5s forwards;
+}
+
+@-webkit-keyframes phoneMaskOpen1 {
+    from {
+        top: 4%;
+        bottom: 18%;
+        left: 31%;
+        right: 16%;
+        border-radius: 6.25vw;
+    }
+    to {
+        top: 2%;
+        bottom: 18%;
+        left: 31%;
+        right: 47%;
+        border-radius: 5vw;
+    }
+}
+
+@keyframes phoneMaskOpen1 {
+    from {
+        top: 4%;
+        bottom: 18%;
+        left: 31%;
+        right: 16%;
+        border-radius: 6.25vw;
+    }
+    to {
+        top: 2%;
+        bottom: 18%;
+        left: 31%;
+        right: 47%;
+        border-radius: 5vw;
+    }
+}
+
+@-webkit-keyframes phoneMaskOpen2 {
+    from {
+        top: 2%;
+        bottom: 18%;
+        left: 31%;
+        right: 47%;
+        border-radius: 5vw;
+    }
+    to {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+        border-bottom-right-radius: 1vw;
+    }
+}
+
+@keyframes phoneMaskOpen2 {
+    from {
+        top: 2%;
+        bottom: 18%;
+        left: 31%;
+        right: 47%;
+        border-radius: 5vw;
+    }
+    to {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+        border-bottom-right-radius: 1vw;
+    }
+}
+
+@-webkit-keyframes phoneMaskClose1 {
+    from {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+        border-bottom-right-radius: 1vw;
+    }
+    to {
+        top: 2%;
+        bottom: 18%;
+        left: 31%;
+        right: 47%;
+        border-radius: 5vw;
+    }
+}
+
+@keyframes phoneMaskClose1 {
+    from {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+        border-bottom-right-radius: 1vw;
+    }
+    to {
+        top: 2%;
+        bottom: 18%;
+        left: 31%;
+        right: 47%;
+        border-radius: 5vw;
+    }
+}
+
+@-webkit-keyframes phoneMaskClose2 {
+    from {
+        top: 2%;
+        bottom: 18%;
+        left: 31%;
+        right: 47%;
+        border-radius: 5vw;
+    }
+    to {
+        top: 4%;
+        bottom: 18%;
+        left: 31%;
+        right: 16%;
+        border-radius: 6.25vw;
+    }
+}
+
+@keyframes phoneMaskClose2 {
+    from {
+        top: 2%;
+        bottom: 18%;
+        left: 31%;
+        right: 47%;
+        border-radius: 5vw;
+    }
+    to {
+        top: 4%;
+        bottom: 18%;
+        left: 31%;
+        right: 16%;
+        border-radius: 6.25vw;
+    }
+}
+
+@-webkit-keyframes phoneImgOpen1 {
+    from {
+        -webkit-transform: translate(127%, -22%) scale(4);
+        transform: translate(127%, -22%) scale(4);
+    }
+    to {
+        -webkit-transform: translate(83%, 24%) scale(1.7);
+        transform: translate(83%, 24%) scale(1.7);
+    }
+}
+
+@keyframes phoneImgOpen1 {
+    from {
+        -webkit-transform: translate(127%, -22%) scale(4);
+        transform: translate(127%, -22%) scale(4);
+    }
+    to {
+        -webkit-transform: translate(83%, 24%) scale(1.7);
+        transform: translate(83%, 24%) scale(1.7);
+    }
+}
+
+@-webkit-keyframes phoneImgOpen2 {
+    from {
+        -webkit-transform: translate(83%, 24%) scale(1.7);
+        transform: translate(83%, 24%) scale(1.7);
+    }
+    to {
+        -webkit-transform: translate(0%, 0%) scale(1);
+        transform: translate(0%, 0%) scale(1);
+    }
+}
+
+@keyframes phoneImgOpen2 {
+    from {
+        -webkit-transform: translate(83%, 24%) scale(1.7);
+        transform: translate(83%, 24%) scale(1.7);
+    }
+    to {
+        -webkit-transform: translate(0%, 0%) scale(1);
+        transform: translate(0%, 0%) scale(1);
+    }
+}
+
+@-webkit-keyframes phoneImgClose1 {
+    from {
+        -webkit-transform: translate(0%, 0%) scale(1);
+        transform: translate(0%, 0%) scale(1);
+    }
+    to {
+        -webkit-transform: translate(83%, 24%) scale(1.7);
+        transform: translate(83%, 24%) scale(1.7);
+    }
+}
+
+@keyframes phoneImgClose1 {
+    from {
+        --webkit-transform: translate(0%, 0%) scale(1);
+        transform: translate(0%, 0%) scale(1);
+    }
+    to {
+        -webkit-transform: translate(83%, 24%) scale(1.7);
+        transform: translate(83%, 24%) scale(1.7);
+    }
+}
+
+@-webkit-keyframes phoneImgClose2 {
+    from {
+        -webkit-transform: translate(83%, 24%) scale(1.7);
+        transform: translate(83%, 24%) scale(1.7);
+    }
+    to {
+        -webkit-transform: translate(127%, -22%) scale(4);
+        transform: translate(127%, -22%) scale(4);
+    }
+}
+
+@keyframes phoneImgClose2 {
+    from {
+        -webkit-transform: translate(83%, 24%) scale(1.7);
+        transform: translate(83%, 24%) scale(1.7);
+    }
+    to {
+        -webkit-transform: translate(127%, -22%) scale(4);
+        transform: translate(127%, -22%) scale(4);
+    }
+}
+
+@-webkit-keyframes phoneBgOpen {
+    from {
+        -webkit-transform: translate(14.5vw, 101%);
+        transform: translate(14.5vw, 101%);
+    }
+    to {
+        -webkit-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+    }
+}
+
+@keyframes phoneBgOpen {
+    from {
+        -webkit-transform: translate(14.5vw, 101%);
+        transform: translate(14.5vw, 101%);
+    }
+    to {
+        -webkit-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+    }
+}
+
+@-webkit-keyframes phoneBgIEOpen {
+    from {
+        -webkit-transform: translate(28.67%, 101%);
+        transform: translate(28.67%, 101%);
+    }
+    to {
+        -webkit-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+    }
+}
+
+@keyframes phoneBgIEOpen {
+    from {
+        -webkit-transform: translate(28.67%, 101%);
+        transform: translate(28.67%, 101%);
+    }
+    to {
+        -webkit-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+    }
+}
+
+@-webkit-keyframes phoneBgClose {
+    from {
+        -webkit-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+    }
+    to {
+        -webkit-transform: translate(14.5vw, 101%);
+        transform: translate(14.5vw, 101%);
+    }
+}
+
+@keyframes phoneBgClose {
+    from {
+        -webkit-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+    }
+    to {
+        -webkit-transform: translate(14.5vw, 101%);
+        transform: translate(14.5vw, 101%);
+    }
+}
+
+@-webkit-keyframes phoneBgIEClose {
+    from {
+        -webkit-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+    }
+    to {
+        -webkit-transform: translate(28.67%, 101%);
+        transform: translate(28.67%, 101%);
+    }
+}
+
+@keyframes phoneBgIEClose {
+    from {
+        -webkit-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+    }
+    to {
+        -webkit-transform: translate(28.67%, 101%);
+        transform: translate(28.67%, 101%);
+    }
+}
+
+.stark-triple.stark-animated .phone-mask {
+    animation: phoneMaskOpen1 1s cubic-bezier(0.88, 0.11, 0.31, 1) forwards, phoneMaskOpen2 0.7s cubic-bezier(0.88, 0.11, 0.31, 1) 1.5s forwards;
+}
+
+.stark-triple.stark-animated .phone-img {
+    animation: phoneImgOpen1 1s cubic-bezier(0.88, 0.11, 0.31, 1) forwards, phoneImgOpen2 0.7s cubic-bezier(0.88, 0.11, 0.31, 1) 1.5s forwards;
+}
+
+.stark-triple.stark-animated .phone-bg {
+    animation: phoneBgOpen 0.7s cubic-bezier(0.88, 0.11, 0.31, 1) 1.5s forwards;
+}
+
+_:-ms-lang(x),
+.stark-triple.stark-animated .phone-bg {
+    animation: phoneBgIEOpen 0.7s cubic-bezier(0.88, 0.11, 0.31, 1) 1.5s forwards;
+}
+
+.stark-triple.stark-animated .text-container-col {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: all 0.7s cubic-bezier(0.88, 0.11, 0.31, 1) 1.5s;
+    transition: all 0.7s cubic-bezier(0.88, 0.11, 0.31, 1) 1.5s;
+}
+
+@media (max-width: 640px),
+(max-width: 1200px) and (max-aspect-ratio: 1/1) {
+    #triple-trigger {
+        position: relative;
+        top: 25vh;
+    }
+    .stark-triple .container {
+        width: 100%;
+    }
+    .stark-triple .text-container-col {
+        position: unset;
+        width: 85vw;
+        margin: 0 auto;
+        -webkit-transform: none;
+        transform: none;
+    }
+    .stark-triple .animate-container-outer {
+        width: 92.4vw;
+        margin-top: 6.67vw;
+    }
+    .stark-triple .phone-animate {
+        width: 100%;
+    }
+    .stark-triple .phone-animate::before {
+        padding-top: 96vw;
+    }
+    .stark-triple .phone-mask {
+        top: 25%;
+        bottom: 14%;
+        left: 25.8%;
+        right: 25.8%;
+        border-radius: 10.6vw;
+    }
+    .stark-triple .phone-img {
+        background-image: url(/web/20201123122233im_/https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/huawei-p-smart-pro/img/mob/huawei-p-smart-pro-48mp-camera-mob@3x.png);
+        width: 70.13vw;
+        height: 90.53vw;
+        -webkit-transform: translate(81%, -18%) scale(3);
+        transform: translate(81%, -18%) scale(3);
+    }
+    .stark-triple .phone-bg {
+        width: 92.4vw;
+        height: 96vw;
+        border-radius: 4vw;
+    }
+    @-webkit-keyframes phoneMaskOpen1 {
+        from {
+            top: 25%;
+            bottom: 14%;
+            left: 25.8%;
+            right: 25.8%;
+            border-radius: 10.6vw;
+        }
+        to {
+            top: 5%;
+            bottom: 5%;
+            left: 35%;
+            right: 38%;
+            border-radius: 10.6vw;
+        }
+    }
+    @keyframes phoneMaskOpen1 {
+        from {
+            top: 25%;
+            bottom: 14%;
+            left: 25.8%;
+            right: 25.8%;
+            border-radius: 10.6vw;
+        }
+        to {
+            top: 5%;
+            bottom: 5%;
+            left: 35%;
+            right: 38%;
+            border-radius: 10.6vw;
+        }
+    }
+    @-webkit-keyframes phoneMaskOpen2 {
+        from {
+            top: 5%;
+            bottom: 5%;
+            left: 35%;
+            right: 38%;
+            border-radius: 10.6vw;
+        }
+        to {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 0;
+            border-bottom-right-radius: 4vw;
+        }
+    }
+    @keyframes phoneMaskOpen2 {
+        from {
+            top: 5%;
+            bottom: 5%;
+            left: 35%;
+            right: 38%;
+            border-radius: 10.6vw;
+        }
+        to {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 0;
+            border-bottom-right-radius: 4vw;
+        }
+    }
+    @-webkit-keyframes phoneMaskClose1 {
+        from {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 0;
+            border-bottom-right-radius: 4vw;
+        }
+        to {
+            top: 5%;
+            bottom: 5%;
+            left: 35%;
+            right: 38%;
+            border-radius: 10.6vw;
+        }
+    }
+    @keyframes phoneMaskClose1 {
+        from {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 0;
+            border-bottom-right-radius: 4vw;
+        }
+        to {
+            top: 5%;
+            bottom: 5%;
+            left: 35%;
+            right: 38%;
+            border-radius: 10.6vw;
+        }
+    }
+    @-webkit-keyframes phoneMaskClose2 {
+        from {
+            top: 5%;
+            bottom: 5%;
+            left: 35%;
+            right: 38%;
+        }
+        to {
+            top: 25%;
+            bottom: 14%;
+            left: 25.8%;
+            right: 25.8%;
+        }
+    }
+    @keyframes phoneMaskClose2 {
+        from {
+            top: 5%;
+            bottom: 5%;
+            left: 35%;
+            right: 38%;
+        }
+        to {
+            top: 25%;
+            bottom: 14%;
+            left: 25.8%;
+            right: 25.8%;
+        }
+    }
+    @-webkit-keyframes phoneImgOpen1 {
+        from {
+            -webkit-transform: translate(81%, -18%) scale(3);
+            transform: translate(81%, -18%) scale(3);
+        }
+        to {
+            -webkit-transform: translate(66%, 14%) scale(1.6);
+            transform: translate(66%, 14%) scale(1.6);
+        }
+    }
+    @keyframes phoneImgOpen1 {
+        from {
+            -webkit-transform: translate(81%, -18%) scale(3);
+            transform: translate(81%, -18%) scale(3);
+        }
+        to {
+            -webkit-transform: translate(66%, 14%) scale(1.6);
+            transform: translate(66%, 14%) scale(1.6);
+        }
+    }
+    @-webkit-keyframes phoneImgOpen2 {
+        from {
+            -webkit-transform: translate(66%, 14%) scale(1.6);
+            transform: translate(66%, 14%) scale(1.6);
+        }
+        to {
+            -webkit-transform: translate(0%, 0%) scale(1);
+            transform: translate(0%, 0%) scale(1);
+        }
+    }
+    @keyframes phoneImgOpen2 {
+        from {
+            -webkit-transform: translate(66%, 14%) scale(1.6);
+            transform: translate(66%, 14%) scale(1.6);
+        }
+        to {
+            -webkit-transform: translate(0%, 0%) scale(1);
+            transform: translate(0%, 0%) scale(1);
+        }
+    }
+    @-webkit-keyframes phoneImgClose1 {
+        from {
+            -webkit-transform: translate(0%, 0%) scale(1);
+            transform: translate(0%, 0%) scale(1);
+        }
+        to {
+            -webkit-transform: translate(66%, 14%) scale(1.6);
+            transform: translate(66%, 14%) scale(1.6);
+        }
+    }
+    @keyframes phoneImgClose1 {
+        from {
+            --webkit-transform: translate(0%, 0%) scale(1);
+            transform: translate(0%, 0%) scale(1);
+        }
+        to {
+            -webkit-transform: translate(66%, 14%) scale(1.6);
+            transform: translate(66%, 14%) scale(1.6);
+        }
+    }
+    @-webkit-keyframes phoneImgClose2 {
+        from {
+            -webkit-transform: translate(66%, 14%) scale(1.6);
+            transform: translate(66%, 14%) scale(1.6);
+        }
+        to {
+            -webkit-transform: translate(81%, -18%) scale(3);
+            transform: translate(81%, -18%) scale(3);
+        }
+    }
+    @keyframes phoneImgClose2 {
+        from {
+            -webkit-transform: translate(66%, 14%) scale(1.6);
+            transform: translate(66%, 14%) scale(1.6);
+        }
+        to {
+            -webkit-transform: translate(81%, -18%) scale(3);
+            transform: translate(81%, -18%) scale(3);
+        }
+    }
+    @-webkit-keyframes phoneBgOpen {
+        from {
+            -webkit-transform: translate(14.5vw, 101%);
+            transform: translate(14.5vw, 101%);
+        }
+        to {
+            -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+        }
+    }
+    @keyframes phoneBgOpen {
+        from {
+            -webkit-transform: translate(14.5vw, 101%);
+            transform: translate(14.5vw, 101%);
+        }
+        to {
+            -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+        }
+    }
+    @-webkit-keyframes phoneBgClose {
+        from {
+            -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+        }
+        to {
+            -webkit-transform: translate(14.5vw, 101%);
+            transform: translate(14.5vw, 101%);
+        }
+    }
+    @keyframes phoneBgClose {
+        from {
+            -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+        }
+        to {
+            -webkit-transform: translate(14.5vw, 101%);
+            transform: translate(14.5vw, 101%);
+        }
+    }
+}
+
+
+/* @-webkit-keyframes phoneMaskOpenPad1 {
+    from {
+        top: 25%;
+        bottom: 14%;
+        left: 25.8%;
+        right: 25.8%;
+    }
+    to {
+        top: 5%;
+        bottom: 5%;
+        left: 35%;
+        right: 38%;
+    }
+}
+
+@keyframes phoneMaskOpenPad1 {
+    from {
+        top: 25%;
+        bottom: 14%;
+        left: 25.8%;
+        right: 25.8%;
+    }
+    to {
+        top: 5%;
+        bottom: 5%;
+        left: 35%;
+        right: 38%;
+    }
+}
+
+@-webkit-keyframes phoneMaskOpenPad2 {
+    from {
+        top: 5%;
+        bottom: 5%;
+        left: 35%;
+        right: 38%;
+        border-radius: 10.6vw;
+    }
+    to {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+        border-bottom-right-radius: 4vw;
+    }
+}
+
+@keyframes phoneMaskOpenPad2 {
+    from {
+        top: 5%;
+        bottom: 5%;
+        left: 35%;
+        right: 38%;
+        border-radius: 10.6vw;
+    }
+    to {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+        border-bottom-right-radius: 4vw;
+    }
+}
+
+@-webkit-keyframes phoneMaskClosePad1 {
+    from {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+        border-bottom-right-radius: 4vw;
+    }
+    to {
+        top: 5%;
+        bottom: 5%;
+        left: 35%;
+        right: 38%;
+        border-radius: 10.6vw;
+    }
+}
+
+@keyframes phoneMaskClosePad1 {
+    from {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+        border-bottom-right-radius: 4vw;
+    }
+    to {
+        top: 5%;
+        bottom: 5%;
+        left: 35%;
+        right: 38%;
+        border-radius: 10.6vw;
+    }
+}
+
+@-webkit-keyframes phoneMaskClosePad2 {
+    from {
+        top: 5%;
+        bottom: 5%;
+        left: 35%;
+        right: 38%;
+    }
+    to {
+        top: 25%;
+        bottom: 14%;
+        left: 25.8%;
+        right: 25.8%;
+    }
+}
+
+@keyframes phoneMaskClosePad2 {
+    from {
+        top: 5%;
+        bottom: 5%;
+        left: 35%;
+        right: 38%;
+    }
+    to {
+        top: 25%;
+        bottom: 14%;
+        left: 25.8%;
+        right: 25.8%;
+    }
+} */
+
+
+/* _:default:not(:root:root),
+.title {
+    color: #4e70ff;
+}
+
+_:default:not(:root:root),
+.stark-triple .phone-mask {
+    border-radius: 10.6vw;
+    animation: phoneMaskClosePad1 0.7s cubic-bezier(0.88, 0.11, 0.31, 1) forwards, phoneMaskClosePad2 1s cubic-bezier(0.88, 0.11, 0.31, 1) 1.5s forwards;
+}
+
+_:default:not(:root:root),
+.stark-triple.stark-animated .phone-mask {
+    animation: phoneMaskOpenPad1 1s cubic-bezier(0.88, 0.11, 0.31, 1) forwards, phoneMaskOpenPad2 0.7s cubic-bezier(0.88, 0.11, 0.31, 1) 1.5s forwards;
+} */
+
+.stark-ai-camera .info-img {
+    width: 71vw;
+    margin: 0 auto;
+}
+
+@media (max-width: 640px),
+(max-width: 1200px) and (max-aspect-ratio: 1/1) {
+    .stark-ai-camera .info-img {
+        width: 92vw;
+    }
+}
+
+#night-trigger {
+    position: relative;
+    top: -65px;
+}
+
+.stark-night .container {
+    height: calc(100vh - 65px);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-image: url(/web/20201123122233im_/https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/huawei-p-smart-pro/img/pc/huawei-p-smart-pro-night-mode-pc.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.stark-night .bg-shade {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.stark-night .bg-shade .bg-drag {
+    background-color: #fff;
+    width: 4.688vw;
+    height: 4.688vw;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.stark-night .text-container {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    /* -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); */
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+    color: #fff;
+    margin: 0;
+    /* pointer-events: none; */
+    transition: all 1s;
+}
+
+.stark-night .text-container.animated {
+    -webkit-transform: translate3d(-50%, -50vh, 0);
+    transform: translate3d(-50%, -50vh, 0);
+    transition: all 1s;
+}
+
+_:-ms-lang(x),
+.stark-night .text-container.animated {
+    -webkit-transform: translate(-50%, -50vw);
+    transform: translate(-50%, -50vw);
+}
+
+.stark-night .text-container .text {
+    color: #fff;
+}
+
+.stark-night .text-container .title {
+    /* -webkit-text-stroke: 1px #fff; */
+    color: #fff;
+}
+
+.stark-night .animate-state {
+    width: 4.688vw;
+    height: 4.688vw;
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.stark-night .animate-state .on-svg {
+    position: absolute;
+    opacity: 0;
+}
+
+.stark-night .animate-state .off-svg {
+    position: absolute;
+}
+
+@media (max-width: 1023px) {
+    #night-trigger {
+        top: -44px;
+    }
+    .stark-night .container {
+        height: calc(100vh - 44px);
+    }
+}
+
+@media (max-width: 640px),
+(max-width: 1200px) and (max-aspect-ratio: 1/1) {
+    .stark-night .container {
+        background-image: url(/web/20201123122233im_/https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/huawei-p-smart-pro/img/mob/huawei-p-smart-pro-night-mode-mob.jpg);
+    }
+    .stark-night .bg-shade .bg-drag {
+        width: 12vw;
+        height: 12vw;
+    }
+    .stark-night .text-container {
+        top: 6%;
+    }
+    .stark-night .animate-state {
+        width: 12vw;
+        height: 12vw;
+    }
+}
+
+.stark-lens .lens-animate {
+    position: relative;
+    overflow: hidden;
+}
+
+.stark-lens .lens-animate::before {
+    content: "";
+    display: block;
+    padding-top: 51.56vw;
+}
+
+.stark-lens .lens-animate .mask {
+    position: absolute;
+    top: 15%;
+    left: 18%;
+    right: 18%;
+    bottom: 15%;
+    border-radius: 1.56vw;
+    overflow: hidden;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.stark-lens .lens-animate .mask.active {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    border-radius: 0 !important;
+}
+
+.stark-lens .lens-animate .bg {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-image: url(/web/20201123122233im_/https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/huawei-p-smart-pro/img/pc/huawei-p-smart-pro-wide-angle-pc.jpg);
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+_:-ms-lang(x),
+.stark-lens .lens-animate .mask {
+    border-radius: 30px;
+}
+
+@media (max-width: 640px),
+(max-width: 1200px) and (max-aspect-ratio: 1/1) {
+    #lens-trigger {
+        position: relative;
+        top: -10vw;
+    }
+    .stark-lens .lens-animate::before {
+        padding-top: 88.13vw;
+    }
+    .stark-lens .lens-animate .mask {
+        top: 10%;
+        bottom: 10%;
+        left: 20.6%;
+        right: 20.6%;
+        border-radius: 4vw;
+    }
+    .stark-lens .lens-animate .bg {
+        background-image: url(/web/20201123122233im_/https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/huawei-p-smart-pro/img/mob/huawei-p-smart-pro-wide-angle-mob.jpg);
+    }
+}
+
+.stark-up-camera .camera-animate {
+    width: 62vw;
+    margin: 0 auto;
+    padding-top: 4vw;
+    position: relative;
+}
+
+.stark-up-camera .img-wrap {
+    width: 35.9vw;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.stark-up-camera .img-wrap .img-camera {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.stark-up-camera .img-wrap .img-camera.active {
+    -webkit-transform: translateY(-99%);
+    transform: translateY(-99%);
+}
+
+.stark-up-camera .camera-animate .bg {
+    background-color: #d1f2ff;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 70%;
+    left: 0;
+    bottom: 0;
+    border-radius: 1vw;
+}
+
+@media (max-width: 640px),
+(max-width: 1200px) and (max-aspect-ratio: 1/1) {
+    .stark-up-camera .camera-animate {
+        width: 92vw;
+        padding-top: 5.8vw;
+    }
+    .stark-up-camera .camera-animate .bg {
+        border-radius: 4vw;
+    }
+    .stark-up-camera .img-wrap {
+        width: 54.4vw;
+    }
+}
+
+.stark-storage .info {
+    width: 77.76vw;
+    margin: 0 auto;
+}
+
+.stark-storage .info .slogan {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 4.9vw;
+    text-align: center;
+}
+
+.stark-storage .slogan .top-text {
+    font-size: 3.125vw;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.stark-storage .slogan .top-text sub {
+    font-size: 0.625em;
+}
+
+.stark-storage .slogan .bot-text {
+    font-size: 1.25vw;
+    line-height: 1.4;
+}
+
+@media (max-width: 640px),
+(max-width: 1200px) and (max-aspect-ratio: 1/1) {
+    .stark-storage .info {
+        width: 100%;
+    }
+    .stark-storage .info .slogan {
+        padding: 0 6.6vw;
+    }
+    .stark-storage .slogan .top-text {
+        font-size: 8vw;
+    }
+    .stark-storage .slogan .bot-text {
+        font-size: 2.93vw;
+    }
+}
+
+.stark-battery .text-animate {
+    width: 71vw;
+    height: 18.8vw;
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.stark-battery .svg-wrapper {
+    width: 58.229vw;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.stark-battery .battery-svg {
+    position: relative;
+    z-index: 2;
+    top: -1%;
+    left: -1%;
+}
+
+.stark-battery .battery-num {
+    font-size: 22vw;
+    font-weight: bold;
+    letter-spacing: 2vw;
+    font-variant-numeric: tabular-nums;
+}
+
+.stark-battery .battery-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.stark-battery .battery-4000 {
+    display: none;
+}
+
+
+/* _:-ms-lang(x),
+.stark-battery .battery-4000 {
+    display: block;
+} */
+
+_:-ms-lang(x),
+.stark-battery .battery-num {
+    letter-spacing: 1vw;
+}
+
+.stark-battery .battery-mah {
+    width: 11.25vw;
+}
+
+@media (max-width: 640px),
+(max-width: 1200px) and (max-aspect-ratio: 1/1) {
+    .stark-battery .text-animate {
+        width: 92.26vw;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .stark-battery .svg-wrapper {
+        width: 100%;
+        height: 29.73vw;
+    }
+    .stark-battery .battery-num {
+        font-size: 35vw;
+        letter-spacing: 1vw;
+    }
+    .stark-battery .battery-mah {
+        width: 19.73vw;
+        margin-top: 2.3vw;
+        margin-right: 5vw;
+    }
+}
+
+.stark-kirin .info {
+    width: 71vw;
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.stark-kirin .info .slogan {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 2.5vw 0;
+}
+
+.stark-kirin .info .slogan-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+
+.stark-kirin .info .top-text {
+    font-size: 3.125vw;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+.stark-kirin .info .top-text sub {
+    font-size: 0.75em;
+}
+
+.stark-kirin .info .bot-text {
+    font-size: 1.25vw;
+    line-height: 1.563vw;
+}
+
+.stark-kirin .info .slogan-arrow {
+    width: 0.98vw;
+    vertical-align: baseline;
+    margin-left: 0.5vw;
+}
+
+.stark-kirin .info .info-img {
+    width: 50vw;
+    overflow: hidden;
+    border-radius: 1vw;
+}
+
+@media (max-width: 640px),
+(max-width: 1200px) and (max-aspect-ratio: 1/1) {
+    .stark-kirin .info {
+        display: block;
+        width: 91.86vw;
+    }
+    .stark-kirin .info .slogan {
+        width: 84vw;
+        margin: 0 auto;
+    }
+    .stark-kirin .info .slogan-list {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 6.67vw;
+    }
+    .stark-kirin .info .bot-text {
+        -ms-flex: 1;
+        flex: 1;
+        font-size: 3.2vw;
+        line-height: 4vw;
+    }
+    .stark-kirin .info .top-text {
+        -ms-flex: 1;
+        flex: 1;
+        font-size: 8vw;
+    }
+    .stark-kirin .info .top-text sup {
+        font-size: 0.55em;
+    }
+    .stark-kirin .info .slogan-arrow {
+        width: 2.4vw;
+    }
+    .stark-kirin .info .info-img {
+        width: 100%;
+        border-radius: 4vw;
+    }
+}
+
+.stark-emui .container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 71vw;
+    margin: 0 auto;
+}
+
+.stark-emui .info-text {
+    width: 35vw;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.stark-emui .slogan .slogan-list {
+    margin-top: 4.6875vw;
+}
+
+.stark-emui .slogan .slogan-text {
+    font-size: 1.25vw;
+    line-height: 1.563vw;
+}
+
+.stark-emui .slogan .line {
+    position: relative;
+    height: 1.1vw;
+    padding-top: 2vw;
+}
+
+.stark-emui .slogan .animate-line {
+    background-image: linear-gradient(to right, #4e70ff, #d1ffff);
+    border-radius: 0.5vw;
+    height: 100%;
+    width: 2px;
+}
+
+.stark-emui .slogan .line-1 {
+    width: 12.8vw;
+}
+
+.stark-emui .slogan .line-2 {
+    width: 19.2vw;
+}
+
+.stark-emui .slogan .line-3 {
+    width: 12.1vw;
+}
+
+.stark-emui .slogan .line .animate-text {
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    line-height: 0.9;
+    font-size: 3.125vw;
+    font-weight: bold;
+    margin-left: 2vw;
+}
+
+.stark-emui .slogan .line .animate-text sub {
+    font-size: 0.75em;
+}
+
+.stark-emui .info-img {
+    width: 28.69vw;
+}
+
+_:-ms-lang(x),
+.stark-emui .slogan .line .animate-text {
+    min-width: 7.8vw;
+}
+
+@media (max-width: 640px),
+(max-width: 1200px) and (max-aspect-ratio: 1/1) {
+    .stark-emui .container {
+        display: block;
+        width: 84vw;
+    }
+    .stark-emui .info-text {
+        width: 100%;
+        display: block;
+    }
+    .stark-emui .slogan .slogan-list {
+        margin-top: 6.67vw;
+    }
+    .stark-emui .slogan .slogan-text {
+        font-size: 3.2vw;
+        line-height: 4vw;
+    }
+    .stark-emui .slogan .line {
+        position: relative;
+        height: 2.667vw;
+        padding-top: 5vw;
+    }
+    .stark-emui .slogan .animate-line {
+        background-image: linear-gradient(to right, #4e70ff, #d1ffff);
+        border-radius: 2vw;
+        height: 100%;
+        width: 2px;
+    }
+    .stark-emui .slogan .line-1 {
+        width: 28vw;
+    }
+    .stark-emui .slogan .line-2 {
+        width: 42vw;
+    }
+    .stark-emui .slogan .line-3 {
+        width: 26.7vw;
+    }
+    .stark-emui .slogan .line .animate-text {
+        font-size: 8vw;
+        margin-left: 6vw;
+    }
+    .stark-emui .slogan .line .animate-text sup {
+        font-size: 0.55em;
+    }
+    .stark-emui .info-img {
+        width: 61.73vw;
+        /* margin: 6.67vw auto 0; */
+        margin: 8.67vw auto 0;
+    }
+}
+
+.component-footnotes {
+    width: 71vw;
+    padding: 4vw 0 4vw 2em;
+    margin: 0 auto;
+    list-style: decimal;
+    color: #a2a2a2;
+    font-size: 14px;
+    line-height: 25px;
+    border-top: 1px solid #a2a2a2;
+    box-sizing: border-box;
+}
+
+.component-footnotes .current {
+    color: #1e1e1e;
+}
+
+@media (max-width: 640px),
+(max-width: 1200px) and (max-aspect-ratio: 1/1) {
+    .component-footnotes {
+        width: 84vw;
+        padding: 15vw 0 15vw 2em;
+        line-height: 23px;
+    }
+}
+
+.cbg-backtotop {
+    position: fixed;
+    z-index: 800;
+    bottom: 50px;
+    right: 50px;
+}
+
+.cbg-backtotop a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 5px 0;
+    text-indent: -9999px;
+    background: url(/web/20201123122233im_/https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/store/img/sprites_cbg_icon.png) no-repeat;
+    opacity: 0.6;
+    filter: alpha(opacity=80);
+    transition: all linear 0.2s;
+}
+
+.cbg-backtotop a:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.cbg-backtotop a.hidden {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: default;
+}
+
+.cbg-backtotop a.cbg-icon-backtotop {
+    background-position: -549px -188px;
+}
+
+.cbg-backtotop a.cbg-icon-backtohome {
+    background-position: -549px -148px;
+}
+/*
+     FILE ARCHIVED ON 12:22:33 Nov 23, 2020 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:19:26 Mar 05, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.521
+  exclusion.robots: 0.017
+  exclusion.robots.policy: 0.008
+  esindex: 0.01
+  cdx.remote: 8.929
+  LoadShardBlock: 95.87 (3)
+  PetaboxLoader3.datanode: 234.451 (5)
+  load_resource: 941.078 (2)
+  PetaboxLoader3.resolve: 778.51 (2)
+*/

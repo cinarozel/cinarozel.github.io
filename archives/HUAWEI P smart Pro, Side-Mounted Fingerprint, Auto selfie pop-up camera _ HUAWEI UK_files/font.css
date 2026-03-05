@@ -1,0 +1,74 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Manrope";
+  src: url("/web/20210508033624im_/https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-ecommerce/ec-global/fonts/manrope-extrabold.woff2") format("woff2"), /* Modern browsers */
+  url("/web/20210508033624im_/https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-ecommerce/ec-global/fonts/manrope-extrabold.woff") format("woff"), /* Legacy browsers */
+  url("/web/20210508033624im_/https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-ecommerce/ec-global/fonts/manrope-extrabold.otf") format("truetype"); /* Android, iOS */
+  font-style: normal;
+  font-weight: 800; }
+@font-face {
+  font-family: "Manrope";
+  src: url("/web/20210508033624im_/https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-ecommerce/ec-global/fonts/manrope-bold.woff2") format("woff2"),
+  url("/web/20210508033624im_/https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-ecommerce/ec-global/fonts/manrope-bold.woff") format("woff"),
+  url("/web/20210508033624im_/https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-ecommerce/ec-global/fonts/manrope-bold.otf") format("truetype");
+  font-style: normal;
+  font-weight: 700; }
+@font-face {
+  font-family: "Manrope";
+  src: url("/web/20210508033624im_/https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-ecommerce/ec-global/fonts/manrope-semibold.woff2") format("woff2"),
+  url("/web/20210508033624im_/https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-ecommerce/ec-global/fonts/manrope-semibold.woff") format("woff"),
+  url("/web/20210508033624im_/https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-ecommerce/ec-global/fonts/manrope-semibold.otf") format("truetype");
+  font-style: normal;
+  font-weight: 600; }
+@font-face {
+  font-family: "Manrope";
+  src: url("/web/20210508033624im_/https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-ecommerce/ec-global/fonts/manrope-medium.woff2") format("woff2"),
+  url("/web/20210508033624im_/https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-ecommerce/ec-global/fonts/manrope-medium.woff") format("woff"),
+  url("/web/20210508033624im_/https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-ecommerce/ec-global/fonts/manrope-medium.otf") format("truetype");
+  font-style: normal;
+  font-weight: 500; }
+@font-face {
+  font-family: "Manrope";
+  src: url("/web/20210508033624im_/https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-ecommerce/ec-global/fonts/manrope-regular.woff2") format("woff2"),
+  url("/web/20210508033624im_/https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-ecommerce/ec-global/fonts/manrope-regular.woff") format("woff"),
+  url("/web/20210508033624im_/https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-ecommerce/ec-global/fonts/manrope-regular.otf") format("truetype");
+  font-style: normal;
+  font-weight: 400; }
+@font-face {
+  font-family: "Manrope";
+  src: url("/web/20210508033624im_/https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-ecommerce/ec-global/fonts/manrope-light.woff2") format("woff2"),
+  url("/web/20210508033624im_/https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-ecommerce/ec-global/fonts/manrope-light.woff") format("woff"),
+  url("/web/20210508033624im_/https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-ecommerce/ec-global/fonts/manrope-light.otf") format("truetype");
+  font-style: normal;
+  font-weight: 300; }
+@font-face {
+  font-family: "Manrope";
+  src: url("/web/20210508033624im_/https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-ecommerce/ec-global/fonts/manrope-thin.woff2") format("woff2"),
+  url("/web/20210508033624im_/https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-ecommerce/ec-global/fonts/manrope-thin.woff") format("woff"),
+  url("/web/20210508033624im_/https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-ecommerce/ec-global/fonts/manrope-thin.otf") format("truetype");
+  font-style: normal;
+  font-weight: 200; }
+*,*:before,*:after {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
+/*
+     FILE ARCHIVED ON 03:36:24 May 08, 2021 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:19:33 Mar 05, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.51
+  exclusion.robots: 0.012
+  exclusion.robots.policy: 0.005
+  esindex: 0.01
+  cdx.remote: 86.544
+  LoadShardBlock: 466.056 (6)
+  PetaboxLoader3.datanode: 389.914 (8)
+  PetaboxLoader3.resolve: 2045.349 (3)
+  load_resource: 2079.237 (2)
+*/

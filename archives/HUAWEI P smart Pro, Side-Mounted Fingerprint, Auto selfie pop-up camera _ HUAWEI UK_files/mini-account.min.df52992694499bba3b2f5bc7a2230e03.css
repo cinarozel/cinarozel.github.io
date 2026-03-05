@@ -1,0 +1,49 @@
+.mini-account-btn i{position:absolute;left:0}
+.mini-account-btn .mini-account-icon{display:block;width:20px;height:20px}
+.ec-ma{width:380px;position:fixed;z-index:999;line-height:1.5;display:none;font-family:"Manrope","akkuratPro-regular",Helvetica,Arial,sans-serif}
+.ec-ma,.ec-ma a,.ec-ma-empty{color:#1e1e1e}
+.ec-ma a:hover{color:#de1a33;text-decoration:underline}
+.ec-ma-nav-list{margin:0}
+.ec-ma-nav-list li{margin:1.875rem 0;font-size:.875rem;font-weight:500}
+.ec-ma-nav-list li:nth-child(1){margin-top:0}
+.ec-ma-nav-list li:nth-last-child(1){margin-bottom:0}
+.ec-ma-nav-list i:nth-child(1){position:absolute;left:0;top:0;width:100%}
+.ec-ma-nav-list .hsvg-right{position:absolute;right:0;top:calc((1.5rem - .75rem) / 2)}
+.ec-ma-nav-list a:hover .hsvg-right{background-image:url("data:image/svg+xml,%3csvgxmlns='http://www.w3.org/2000/svg'viewBox='00800800'%3e%3cpathfill='%23DE1A33'd='M278.4,726.1c-3.7,0-7.3-1.2-10.4-3.7c-6.9-5.7-7.8-16-2.1-22.9l246.1-295.3L264.7,102.4c-5.7-6.9-4.7-17.1,2.3-22.8c6.9-5.7,17.1-4.7,22.8,2.3L545.6,394c4.9,6,4.9,14.7-0.1,20.7L290.8,720.3C287.6,724.1,283,726.1,278.4,726.1L278.4,726.1zM278.4,726.1'/%3e%3c/svg%3e")}
+@media(min-width:1024px){.ec-ma.on{display:block}
+.ec-ma.on,.ec-ma-arrow::before{border:1px solid #f0f0f0;-webkit-box-shadow:0 3px 6px rgba(0,0,0,.15);box-shadow:0 3px 6px rgba(0,0,0,.15)}
+.ec-ma-arrow::before,.ec-ma-arrow::after{content:"";background-color:#fff;display:block;position:absolute}
+.ec-ma-arrow.account::before{width:14px;height:14px;top:-8px;border-bottom:0 none;border-right:0 none;-webkit-transform:rotate(60deg) skewX(30deg);transform:rotate(60deg) skewX(30deg)}
+.ec-ma-arrow:after{width:20px;height:14px;top:0;right:42px}
+html[dir=rtl] .ec-ma-arrow::before{right:inherit;left:44px}
+html[dir=rtl] .ec-ma-arrow::after{right:inherit;left:42px}
+}
+@media(max-width:1023px){.mini-account-btn .hsvg-close,.mini-account-btn.on .hsvg-close,.ec-ma{width:100%}
+.ec-ma.on{overflow:hidden}
+.ec-ma-arrow{display:block;width:100vw;height:100vh;background-color:#000;opacity:.5;z-index:1;position:absolute}
+.ec-ma-nav-list li:nth-child(1){border-top:0;padding-top:2rem}
+.ec-ma-nav-list li,.ec-ma-nav-list li{margin:2rem 0}
+.ec-ma-nav-list a{height:1rem;line-height:1.23;padding:0 1.5rem 0 2rem}
+.ec-ma-nav-list .hsvg-right{top:calc((1.25rem - .75rem) / 2)}
+.ec-ma-nav-list li:nth-last-child(1){margin-bottom:0}
+}
+/*
+     FILE ARCHIVED ON 13:47:18 May 06, 2021 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:19:26 Mar 05, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.719
+  exclusion.robots: 0.027
+  exclusion.robots.policy: 0.012
+  esindex: 0.014
+  cdx.remote: 24.334
+  LoadShardBlock: 272.608 (3)
+  PetaboxLoader3.datanode: 315.134 (5)
+  load_resource: 277.005 (2)
+  PetaboxLoader3.resolve: 184.623 (2)
+*/

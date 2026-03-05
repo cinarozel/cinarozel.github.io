@@ -1,0 +1,37 @@
+.modal-title{font-weight:700;font-size:1rem}
+.modal-body>p{text-align:center;font-size:1rem;font-weight:700;margin-bottom:0;line-height:1.5}
+.modal-body>p.secondary{padding-top:.75rem;color:#bebebe}
+.modal-header .close{position:absolute;opacity:1}
+.fmodal .modal-header .close.put-left{right:inherit;left:-2.125rem}
+@media(min-width:1024px){.modal-title{font-size:1.5rem}
+.modal-header .close{top:-1.5rem;right:-2.125rem}
+}
+@media(max-width:1023px){.fmodal.modal-dialog{max-width:100% !important;margin:0}
+.fmodal .modal-content{margin-top:100vh;padding:0;height:100vh !important;max-height:none !important;border-radius:0;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-transition:margin-top .4s ease-in-out;transition:margin-top .4s ease-in-out}
+.fmodal .modal-content.mobile-ani{margin-top:0;-webkit-transition:margin-top .4s cubic-bezier(0.4,0,1,1);transition:margin-top .4s cubic-bezier(0.4,0,1,1)}
+.modal-header .close{top:-1.75rem;right:0;width:.875rem;height:.875rem}
+.modal-header .close.hsvg-close{top:5px}
+.fmodal .modal-header{padding:1.125rem 15px;width:100%;text-align:center;background:#f8f8f8;min-height:60px}
+.fmodal .modal-header>.d-md-none{padding-right:1.875rem;font-weight:700}
+.fmodal .modal-body{padding:1.5rem 15px;background-color:#fff}
+}
+/*
+     FILE ARCHIVED ON 03:35:18 May 08, 2021 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:19:24 Mar 05, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.58
+  exclusion.robots: 0.025
+  exclusion.robots.policy: 0.011
+  esindex: 0.01
+  cdx.remote: 14.594
+  LoadShardBlock: 47.973 (3)
+  PetaboxLoader3.datanode: 63.419 (4)
+  load_resource: 96.64
+  PetaboxLoader3.resolve: 50.705
+*/
