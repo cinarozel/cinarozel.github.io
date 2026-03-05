@@ -3,71 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huawei P Smart Pro (STK-L21)</title>
+    <title>P Smart Pro</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-    </style>
+    <script>
+        tailwind.config = { darkMode: 'media' }
+    </script>
 </head>
-<body class="bg-white p-6 md:p-12 text-slate-800">
+<body class="bg-white dark:bg-slate-950 p-6 md:p-12 text-slate-800 dark:text-slate-100 transition-colors">
     <div class="max-w-5xl mx-auto">
-        <a href="/devices" class="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-blue-600 transition-colors group">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
-            Cihazlara Dön
-        </a>
+        <a href="/devices" class="text-gray-400 hover:text-blue-600 transition-colors">← Geri Dön</a>
 
-        <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center border-t pt-12">
-            <div class="bg-slate-50 rounded-[2.5rem] p-12 flex items-center justify-center border border-slate-100">
+        <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-16 border-t dark:border-slate-800 pt-12">
+            <div class="bg-slate-50 dark:bg-slate-900 rounded-[2.5rem] p-12 flex items-center justify-center border dark:border-slate-800">
                 <img src="https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/list-image/phones/huawei-p-smart-pro/huawei-p-smart-pro-listImage-breathing-crystal-new.png"
-                     alt="Huawei P Smart Pro" class="w-full h-auto drop-shadow-2xl scale-110">
+                     class="w-full h-auto drop-shadow-2xl">
             </div>
 
             <div>
-                <header class="mb-10">
-                    <h1 class="text-5xl font-black text-slate-900 tracking-tight">P Smart Pro</h1>
-                    <p class="text-xl text-slate-400 mt-2 font-light italic">"Breathing Crystal" — STK-L21</p>
-                </header>
+                <h1 class="text-5xl font-black tracking-tight mb-2">P Smart Pro</h1>
+                <p class="text-xl text-slate-400 font-light mb-8">STK-L21</p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                        <span class="text-[10px] font-bold text-blue-600 uppercase tracking-tighter">İşlemci</span>
-                        <p class="text-sm font-semibold">Huawei Kirin 710F</p>
-                    </div>
-                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                        <span class="text-[10px] font-bold text-blue-600 uppercase tracking-tighter">Ekran</span>
-                        <p class="text-sm font-semibold">6.59" LTPS LCD (FHD+)</p>
-                    </div>
-                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                        <span class="text-[10px] font-bold text-blue-600 uppercase tracking-tighter">RAM & Bellek</span>
-                        <p class="text-sm font-semibold">6GB RAM + 128GB ROM</p>
-                    </div>
-                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                        <span class="text-[10px] font-bold text-blue-600 uppercase tracking-tighter">Ön Kamera</span>
-                        <p class="text-sm font-semibold">16MP Pop-up Kamera</p>
+                <div class="space-y-4 mb-10">
+                    <div class="p-4 bg-slate-50 dark:bg-slate-900 rounded-xl border dark:border-slate-800">
+                        <span class="text-xs text-blue-600 font-bold uppercase">Resmi Arşivler</span>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-3">
+                            <a href="/archives/HUAWEI P smart Pro - HUAWEI Türkiye.html" class="p-2 bg-white dark:bg-slate-800 border dark:border-slate-700 rounded text-xs text-center hover:bg-blue-50 dark:hover:bg-blue-900 transition-all font-semibold">TR Arşivi (HTML)</a>
+                            <a href="/archives/HUAWEI P smart Pro Specifications - HUAWEI Global.html" class="p-2 bg-white dark:bg-slate-800 border dark:border-slate-700 rounded text-xs text-center hover:bg-blue-50 dark:hover:bg-blue-900 transition-all font-semibold">UK Arşivi (Global)</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="p-6 bg-slate-900 rounded-2xl text-white shadow-lg">
-                    <div class="flex items-center gap-2 mb-4 text-blue-400">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-                        </svg>
-                        <h4 class="text-xs font-bold uppercase tracking-widest">Resmi Veri Arşivi</h4>
-                    </div>
-                    <p class="text-sm text-slate-300 mb-6">
-                        Bu cihazın tüm teknik verileri ve lansman dokümanları resmi kaynaklardan doğrulanarak arşivlenmiştir.
-                    </p>
-                    <a href="https://web.archive.org/web/20200806121415/https://consumer.huawei.com/en/phones/p-smart-pro/specs/"
-                       target="_blank"
-                       class="inline-flex items-center justify-center w-full py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold transition-all gap-2 text-sm">
-                        Resmi Kaynağı Görüntüle
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                    </a>
+                <div class="p-6 bg-blue-600 rounded-2xl text-white shadow-xl">
+                    <h4 class="font-bold mb-2 uppercase text-xs">Teknik Durum</h4>
+                    <p class="text-sm text-blue-100 italic">"Pop-up kamera ve çentiksiz tam ekran deneyimi için saklanan özel bir model."</p>
                 </div>
             </div>
         </div>
