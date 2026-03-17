@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Codes</title>
+    <style>
+        :root { --p: #1a2a6c; --s: #ff9800; }
+        body { font-family: sans-serif; background: #f4f7f6; margin: 0; padding: 15px; }
+        #langBtn { position: fixed; top: 15px; left: 15px; z-index: 1000; padding: 10px 15px; background: var(--s); color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        .header { text-align: center; background: var(--p); color: white; padding: 25px; border-radius: 10px; margin-bottom: 15px; }
+        .search-grid { position: sticky; top: 70px; z-index: 999; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 15px; }
+        input { padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px; }
+        .wrap { background: white; border-radius: 10px; overflow-x: auto; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        table { width: 100%; border-collapse: collapse; min-width: 700px; }
+        th { background: #f8f9fa; padding: 15px; text-align: left; border-bottom: 2px solid #eee; }
+        td { padding: 12px; border-bottom: 1px solid #eee; font-size: 14px; }
+        .b { background: #f0f0f0; padding: 3px 7px; border-radius: 4px; font-family: monospace; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<button id="langBtn" onclick="toggle()">TR / EN</button>
+
+<div class="header">
+    <h1 id="t1">Global Emergency Numbers</h1>
+    <p id="t2">Full list of countries & codes</p>
+</div>
+
+<div class="search-grid">
+    <input type="text" id="i1" placeholder="Search Country...">
+    <input type="text" id="i2" placeholder="Code (+)...">
+    <input type="text" id="i3" placeholder="Number (911, 112)...">
+</div>
+
+<div class="wrap">
+    <table>
+        <thead><tr id="th"><th>Country</th><th>Code</th><th>Police</th><th>Ambulance</th><th>Fire</th></tr></thead>
+        <tbody id="tb"></tbody>
+    </table>
+</div>
+
+<script>
+let lang = 'en';
+const db = [
+    {en:"Afghanistan", tr:"Afganistan", c:"+93", p:"119", a:"102", f:"119"},
+    {en:"Albania", tr:"Arnavutluk", c:"+355", p:"129", a:"127", f:"128"},
+    {en:"Algeria", tr:"Cezayir", c:"+213", p:"17", a:"14", f:"14"},
+    {en:"American Samoa", tr:"Amerikan Samoası", c:"+1-684", p:"911", a:"911", f:"911"},
+    {en:"Andorra", tr:"Andorra", c:"+376", p:"110", a:"118", f:"118"},
+    {en:"Angola", tr:"Angola", c:"+244", p:"113", a:"112", f:"115"},
+    {en:"Anguilla", tr:"Anguilla", c:"+1-264", p:"911", a:"911", f:"911"},
+    {en:"Antigua & Barbuda", tr:"Antigua ve Barbuda", c:"+1-268", p:"911", a:"911", f:"911"},
+    {en:"Argentina", tr:"Arjantin", c:"+54", p:"101", a:"107", f:"100"},
+    {en:"Armenia", tr:"Ermenistan", c:"+374", p:"102", a:"103", f:"101"},
+    {en:"Aruba", tr:"Aruba", c:"+297", p:"911", a:"911", f:"911"},
+    {en:"Australia", tr:"Avustralya", c:"+61", p:"000", a:"000", f:"000"},
+    {en:"Austria", tr:"Avusturya", c:"+43", p:"133", a:"144", f:"122"},
+    {en:"Azerbaijan", tr:"Azerbaycan", c:"+994", p:"102", a:"103", f:"101"},
+    {en:"Bahamas", tr:"Bahamalar", c:"+1-242", p:"911", a:"911", f:"911"},
+    {en:"Bahrain", tr:"Bahreyn", c:"+973", p:"999", a:"999", f:"999"},
+    {en:"Bangladesh", tr:"Bangladeş", c:"+880", p:"999", a:"999", f:"999"},
+    {en:"Barbados", tr:"Barbados", c:"+1-246", p:"211", a:"511", f:"311"},
+    {en:"Belarus", tr:"Belarus", c:"+375", p:"102", a:"103", f:"101"},
+    {en:"Belgium", tr:"Belçika", c:"+32", p:"101", a:"112", f:"112"},
+    {en:"Belize", tr:"Belize", c:"+501", p:"911", a:"911", f:"911"},
+    {en:"Benin", tr:"Benin", c:"+229", p:"117", a:"112", f:"118"},
+    {en:"Bermuda", tr:"Bermuda", c:"+1-441", p:"911", a:"911", f:"911"},
+    {en:"Bhutan", tr:"Butan", c:"+975", p:"113", a:"112", f:"110"},
+    {en:"Bolivia", tr:"Bolivya", c:"+591", p:"110", a:"118", f:"119"},
+    {en:"Bosnia & Herzegovina", tr:"Bosna Hersek", c:"+387", p:"122", a:"124", f:"123"},
+    {en:"Botswana", tr:"Botsvana", c:"+267", p:"999", a:"997", f:"998"},
+    {en:"Brazil", tr:"Brezilya", c:"+55", p:"190", a: "192", f: "193"},
+    {en:"British Virgin Islands", tr:"İngiliz Virjin Adaları", c:"+1-284", p:"999", a:"999", f:"999"},
+    {en:"Brunei", tr:"Brunei", c:"+673", p:"993", a:"991", f:"995"},
+    {en:"Bulgaria", tr:"Bulgaristan", c:"+359", p:"112", a:"112", f:"112"},
+    {en:"Burkina Faso", tr:"Burkina Faso", c:"+226", p:"17", a:"112", f:"18"},
+    {en:"Burundi", tr:"Burundi", c:"+257", p:"117", a:"112", f:"118"},
+    {en:"Cambodia", tr:"Kamboçya", c:"+855", p:"117", a:"119", f:"118"},
+    {en:"Cameroon", tr:"Kamerun", c:"+237", p:"112", a:"112", f:"112"},
+    {en:"Canada", tr:"Kanada", c:"+1", p:"911", a:"911", f:"911"},
+    {en:"Cape Verde", tr:"Yeşil Burun", c:"+238", p:"132", a:"130", f:"131"},
+    {en:"Cayman Islands", tr:"Cayman Adaları", c:"+1-345", p:"911", a:"911", f:"911"},
+    {en:"Central African Rep.", tr:"Orta Afrika Cum.", c:"+236", p:"117", a:"1221", f:"118"},
+    {en:"Chad", tr:"Çad", c:"+235", p:"17", a:"2251", f:"18"},
+    {en:"Chile", tr:"Şili", c:"+56", p:"133", a:"131", f:"132"},
+    {en:"China", tr:"Çin", c:"+86", p:"110", a:"120", f:"119"},
+    {en:"Colombia", tr:"Kolombiya", c:"+57", p:"123", a:"123", f:"123"},
+    {en:"Comoros", tr:"Komorlar", c:"+269", p:"17", a:"", f:"18"},
+    {en:"Congo", tr:"Kongo", c:"+242", p:"117", a:"", f:"118"},
+    {en:"Cook Islands", tr:"Cook Adaları", c:"+682", p:"999", a:"998", f:"996"},
+    {en:"Costa Rica", tr:"Kosta Rika", c:"+506", p:"911", a:"911", f:"911"},
+    {en:"Croatia", tr:"Hırvatistan", c:"+385", p:"112", a:"112", f:"112"},
+    {en:"Cuba", tr:"Küba", c:"+53", p:"106", a:"104", f:"105"},
+    {en:"Cyprus", tr:"Kıbrıs", c:"+357", p:"112", a:"112", f:"112"},
+    {en:"Czech Republic", tr:"Çek Cumhuriyeti", c:"+420", p:"158", a:"155", f:"150"},
+    {en:"DR Congo", tr:"Kongo DC", c:"+243", p:"112", a:"", f:"118"},
+    {en:"Denmark", tr:"Danimarka", c:"+45", p:"112", a:"112", f:"112"},
+    {en:"Djibouti", tr:"Cibuti", c:"+253", p:"17", a:"18", f:"18"},
+    {en:"Dominica", tr:"Dominika", c:"+1-767", p:"999", a:"999", f:"999"},
+    {en:"Dominican Republic", tr:"Dominik Cumhuriyeti", c:"+1-809", p:"911", a:"911", f:"911"},
+    {en:"Ecuador", tr:"Ekvador", c:"+593", p:"911", a:"911", f:"911"},
+    {en:"Egypt", tr:"Mısır", c:"+20", p:"122", a:"123", f:"180"},
+    {en:"El Salvador", tr:"El Salvador", c:"+503", p:"911", a:"911", f:"911"},
+    {en:"Eritrea", tr:"Eritre", c:"+291", p:"113", a:"114", f:"116"},
+    {en:"Estonia", tr:"Estonya", c:"+372", p:"112", a:"112", f:"112"},
+    {en:"Eswatini", tr:"Esvatini", c:"+268", p:"999", a:"977", f:"933"},
+    {en:"Ethiopia", tr:"Etiyopya", c:"+251", p:"991", a:"907", f:"939"},
+    {en:"Falkland Islands", tr:"Falkland Adaları", c:"+500", p:"999", a:"999", f:"999"},
+    {en:"Faroe Islands", tr:"Faroe Adaları", c:"+298", p:"112", a:"112", f:"112"},
+    {en:"Fiji", tr:"Fiji", c:"+679", p:"911", a:"911", f:"911"},
+    {en:"Finland", tr:"Finlandiya", c:"+358", p:"112", a:"112", f:"112"},
+    {en:"France", tr:"Fransa", c:"+33", p:"17", a:"15", f:"18"},
+    {en:"French Guiana", tr:"Fransız Guyanası", c:"+594", p:"17", a:"15", f:"18"},
+    {en:"French Polynesia", tr:"Fransız Polinezyası", c:"+689", p:"17", a:"15", f:"18"},
+    {en:"Gabon", tr:"Gabon", c:"+241", p:"1722", a:"1300", f:"18"},
+    {en:"Gambia", tr:"Gambiya", c:"+220", p:"117", a:"116", f:"118"},
+    {en:"Georgia", tr:"Gürcistan", c:"+995", p:"112", a:"112", f:"112"},
+    {en:"Germany", tr:"Almanya", c:"+49", p:"110", a:"112", f:"112"},
+    {en:"Ghana", tr:"Gana", c:"+233", p:"191", a:"193", f:"192"},
+    {en:"Gibraltar", tr:"Cebelitarık", c:"+350", p:"199", a:"190", f:"190"},
+    {en:"Greece", tr:"Yunanistan", c:"+30", p:"100", a:"166", f:"199"},
+    {en:"Greenland", tr:"Grönland", c:"+299", p:"112", a:"112", f:"112"},
+    {en:"Grenada", tr:"Grenada", c:"+1-473", p:"911", a:"434", f:"911"},
+    {en:"Guam", tr:"Guam", c:"+1-671", p:"911", a:"911", f:"911"},
+    {en:"Guatemala", tr:"Guatemala", c:"+502", p:"110", a:"123", f:"123"},
+    {en:"Guinea", tr:"Gine", c:"+224", p:"117", a:"18", f:"18"},
+    {en:"Guyana", tr:"Guyana", c:"+592", p:"911", a:"913", f:"912"},
+    {en:"Haiti", tr:"Haiti", c:"+509", p:"114", a:"116", f:"115"},
+    {en:"Honduras", tr:"Honduras", c:"+504", p:"911", a:"911", f:"911"},
+    {en:"Hong Kong", tr:"Hong Kong", c:"+852", p:"999", a:"999", f:"999"},
+    {en:"Hungary", tr:"Macaristan", c:"+36", p:"112", a:"112", f:"112"},
+    {en:"Iceland", tr:"İzlanda", c:"+354", p:"112", a:"112", f:"112"},
+    {en:"India", tr:"Hindistan", c:"+91", p:"112", a:"112", f:"112"},
+    {en:"Indonesia", tr:"Endonezya", c:"+62", p:"110", a:"118", f:"113"},
+    {en:"Iran", tr:"İran", c:"+98", p:"110", a:"115", f:"125"},
+    {en:"Iraq", tr:"Irak", c:"+964", p:"104", a:"122", f:"115"},
+    {en:"Ireland", tr:"İrlanda", c:"+353", p:"112", a:"112", f:"112"},
+    {en:"Israel", tr:"İsrail", c:"+972", p:"100", a:"101", f:"102"},
+    {en:"Italy", tr:"İtalya", c:"+39", p:"112", a:"118", f:"115"},
+    {en:"Jamaica", tr:"Jamaika", c:"+1-876", p:"119", a:"110", f:"110"},
+    {en:"Japan", tr:"Japonya", c:"+81", p:"110", a:"119", f:"119"},
+    {en:"Jordan", tr:"Ürdün", c:"+962", p:"911", a:"911", f:"911"},
+    {en:"Kazakhstan", tr:"Kazakistan", c:"+7", p:"102", a:"103", f:"101"},
+    {en:"Kenya", tr:"Kenya", c:"+254", p:"999", a:"999", f:"999"},
+    {en:"Kiribati", tr:"Kiribati", c:"+686", p:"992", a:"994", f:"993"},
+    {en:"Kuwait", tr:"Kuveyt", c:"+965", p:"112", a:"112", f:"112"},
+    {en:"Kyrgyzstan", tr:"Kırgızistan", c:"+996", p:"102", a:"103", f:"101"},
+    {en:"Laos", tr:"Laos", c:"+856", p:"191", a:"195", f:"190"},
+    {en:"Latvia", tr:"Letonya", c:"+371", p:"112", a:"112", f:"112"},
+    {en:"Lebanon", tr:"Lübnan", c:"+961", p:"112", a:"140", f:"175"},
+    {en:"Lesotho", tr:"Lesotho", c:"+266", p:"123", a:"121", f:"122"},
+    {en:"Liberia", tr:"Liberya", c:"+231", p:"911", a:"911", f:"911"},
+    {en:"Libya", tr:"Libya", c:"+218", p:"1515", a:"193", f:"190"},
+    {en:"Liechtenstein", tr:"Lihtenştayn", c:"+423", p:"117", a:"144", f:"118"},
+    {en:"Lithuania", tr:"Litvanya", c:"+370", p:"112", a:"112", f:"112"},
+    {en:"Luxembourg", tr:"Lüksemburg", c:"+352", p:"113", a:"112", f:"112"},
+    {en:"Macau", tr:"Makao", c:"+853", p:"999", a:"999", f:"999"},
+    {en:"Madagascar", tr:"Madagaskar", c:"+261", p:"117", a:"124", f:"118"},
+    {en:"Malawi", tr:"Malavi", c:"+265", p:"997", a:"998", f:"999"},
+    {en:"Malaysia", tr:"Malezya", c:"+60", p:"999", a:"999", f:"999"},
+    {en:"Maldives", tr:"Maldivler", c:"+960", p:"119", a:"102", f:"118"},
+    {en:"Mali", tr:"Mali", c:"+223", p:"17", a:"15", f:"18"},
+    {en:"Malta", tr:"Malta", c:"+356", p:"112", a:"112", f:"112"},
+    {en:"Marshall Islands", tr:"Marshall Adaları", c:"+692", p:"911", a:"911", f:"911"},
+    {en:"Mauritania", tr:"Moritanya", c:"+222", p:"17", a:"118", f:"18"},
+    {en:"Mauritius", tr:"Mauritius", c:"+230", p:"999", a:"114", f:"995"},
+    {en:"Mexico", tr:"Meksika", c:"+52", p:"911", a:"911", f:"911"},
+    {en:"Micronesia", tr:"Mikronezya", c:"+691", p:"911", a:"911", f:"911"},
+    {en:"Moldova", tr:"Moldova", c:"+373", p:"112", a:"112", f:"112"},
+    {en:"Monaco", tr:"Monako", c:"+377", p:"17", a:"18", f:"18"},
+    {en:"Mongolia", tr:"Moğolistan", c:"+976", p:"102", a:"103", f:"101"},
+    {en:"Montenegro", tr:"Karadağ", c:"+382", p:"122", a:"124", f:"123"},
+    {en:"Montserrat", tr:"Montserrat", c:"+1-664", p:"999", a:"999", f:"999"},
+    {en:"Morocco", tr:"Fas", c:"+212", p:"19", a:"15", f:"15"},
+    {en:"Mozambique", tr:"Mozambik", c:"+258", p:"119", a:"117", f:"198"},
+    {en:"Myanmar", tr:"Myanmar", c:"+95", p:"199", a:"192", f:"191"},
+    {en:"Namibia", tr:"Namibya", c:"+264", p:"10111", a:"211111", f:"211111"},
+    {en:"Nauru", tr:"Nauru", c:"+674", p:"110", a:"111", f:"112"},
+    {en:"Nepal", tr:"Nepal", c:"+977", p:"100", a:"102", f:"101"},
+    {en:"Netherlands", tr:"Hollanda", c:"+31", p:"112", a:"112", f:"112"},
+    {en:"New Caledonia", tr:"Yeni Kaledonya", c:"+687", p:"17", a:"15", f:"18"},
+    {en:"New Zealand", tr:"Yeni Zelanda", c:"+64", p:"111", a:"111", f:"111"},
+    {en:"Nicaragua", tr:"Nikaragua", c:"+505", p:"118", a:"128", f:"115"},
+    {en:"Niger", tr:"Nijer", c:"+227", p:"17", a:"", f:"18"},
+    {en:"Nigeria", tr:"Nijerya", c:"+234", p:"112", a:"112", f:"112"},
+    {en:"North Korea", tr:"Kuzey Kore", c:"+850", p:"110", a:"119", f:"119"},
+    {en:"North Macedonia", tr:"Kuzey Makedonya", c:"+389", p:"192", a:"194", f:"193"},
+    {en:"Norway", tr:"Norveç", c:"+47", p:"112", a:"113", f:"110"},
+    {en:"Oman", tr:"Umman", c:"+968", p:"9999", a:"9999", f:"9999"},
+    {en:"Pakistan", tr:"Pakistan", c:"+92", p:"15", a:"115", f:"16"},
+    {en:"Palau", tr:"Palau", c:"+680", p:"911", a:"911", f:"911"},
+    {en:"Palestine", tr:"Filistin", c:"+970", p:"100", a:"101", f:"102"},
+    {en:"Panama", tr:"Panama", c:"+507", p:"104", a:"911", f:"103"},
+    {en:"Papua New Guinea", tr:"Papua Yeni Gine", c:"+675", p:"111", a:"111", f:"110"},
+    {en:"Paraguay", tr:"Paraguay", c:"+595", p:"911", a:"911", f:"911"},
+    {en:"Peru", tr:"Peru", c:"+51", p:"105", a:"117", f:"116"},
+    {en:"Philippines", tr:"Filipinler", c:"+63", p:"911", a:"911", f:"911"},
+    {en:"Poland", tr:"Polonya", c:"+48", p:"112", a:"112", f:"112"},
+    {en:"Portugal", tr:"Portekiz", c:"+351", p:"112", a:"112", f:"112"},
+    {en:"Puerto Rico", tr:"Porto Riko", c:"+1-787", p:"911", a:"911", f:"911"},
+    {en:"Qatar", tr:"Katar", c:"+974", p:"999", a:"999", f:"999"},
+    {en:"Romania", tr:"Romanya", c:"+40", p:"112", a:"112", f:"112"},
+    {en:"Russia", tr:"Rusya", c:"+7", p:"102", a:"103", f:"101"},
+    {en:"Rwanda", tr:"Ruanda", c:"+250", p:"112", a:"112", f:"112"},
+    {en:"Saint Kitts & Nevis", tr:"Saint Kitts ve Nevis", c:"+1-869", p:"911", a:"911", f:"911"},
+    {en:"Saint Lucia", tr:"Saint Lucia", c:"+1-758", p:"999", a:"911", f:"911"},
+    {en:"Samoa", tr:"Samoa", c:"+685", p:"995", a:"996", f:"994"},
+    {en:"San Marino", tr:"San Marino", c:"+378", p:"113", a:"118", f:"115"},
+    {en:"Saudi Arabia", tr:"Suudi Arabistan", c:"+966", p:"999", a:"997", f:"998"},
+    {en:"Senegal", tr:"Senegal", c:"+221", p:"17", a:"15", f:"18"},
+    {en:"Serbia", tr:"Sırbistan", c:"+381", p:"192", a:"194", f:"193"},
+    {en:"Seychelles", tr:"Seyşeller", c:"+248", p:"999", a:"151", f:"999"},
+    {en:"Sierra Leone", tr:"Sierra Leone", c:"+232", p:"999", a:"", f:""},
+    {en:"Singapore", tr:"Singapur", c:"+65", p:"999", a:"995", f:"995"},
+    {en:"Slovakia", tr:"Slovakya", c:"+421", p:"158", a:"155", f:"150"},
+    {en:"Slovenia", tr:"Slovenya", c:"+386", p:"113", a:"112", f:"112"},
+    {en:"Solomon Islands", tr:"Solomon Adaları", c:"+677", p:"999", a:"999", f:"999"},
+    {en:"Somalia", tr:"Somali", c:"+252", p:"88", a:"999", f:"555"},
+    {en:"South Africa", tr:"Güney Afrika", c:"+27", p:"10111", a:"10177", f:"10177"},
+    {en:"South Korea", tr:"Güney Kore", c:"+82", p:"112", a:"119", f:"119"},
+    {en:"Spain", tr:"İspanya", c:"+34", p:"112", a:"112", f:"112"},
+    {en:"Sri Lanka", tr:"Sri Lanka", c:"+94", p:"119", a:"110", f:"110"},
+    {en:"Sudan", tr:"Sudan", c:"+249", p:"999", a:"", f:""},
+    {en:"Suriname", tr:"Surinam", c:"+597", p:"115", a:"113", f:"110"},
+    {en:"Sweden", tr:"İsveç", c:"+46", p:"112", a:"112", f:"112"},
+    {en:"Switzerland", tr:"İsviçre", c:"+41", p:"117", a:"144", f:"118"},
+    {en:"Syria", tr:"Suriye", c:"+963", p:"112", a:"110", f:"113"},
+    {en:"Taiwan", tr:"Tayvan", c:"+886", p:"110", a:"119", f:"119"},
+    {en:"Tajikistan", tr:"Tacikistan", c:"+992", p:"102", a:"103", f:"101"},
+    {en:"Tanzania", tr:"Tanzanya", c:"+255", p:"112", a:"112", f:"112"},
+    {en:"Thailand", tr:"Tayland", c:"+66", p:"191", a:"1669", f:"199"},
+    {en:"Togo", tr:"Togo", c:"+228", p:"117", a:"8200", f:"118"},
+    {en:"Tonga", tr:"Tonga", c:"+676", p:"922", a:"933", f:"911"},
+    {en:"Trinidad & Tobago", tr:"Trinidad ve Tobago", c:"+1-868", p:"999", a:"811", f:"990"},
+    {en:"Tunisia", tr:"Tunus", c:"+216", p:"197", a:"190", f:"198"},
+    {en:"Turkey", tr:"Türkiye", c:"+90", p:"112", a:"112", f:"112"},
+    {en:"Turkmenistan", tr:"Türkmenistan", c:"+993", p:"102", a:"103", f:"101"},
+    {en:"Turks & Caicos", tr:"Turks ve Caicos", c:"+1-649", p:"911", a:"911", f:"911"},
+    {en:"Tuvalu", tr:"Tuvalu", c:"+688", p:"911", a:"911", f:"911"},
+    {en:"Uganda", tr:"Uganda", c:"+256", p:"999", a:"999", f:"999"},
+    {en:"Ukraine", tr:"Ukrayna", c:"+380", p:"102", a:"103", f:"101"},
+    {en:"UAE", tr:"BAE", c:"+971", p:"999", a:"998", f:"997"},
+    {en:"United Kingdom", tr:"Birleşik Krallık", c:"+44", p:"999", a:"999", f:"999"},
+    {en:"USA", tr:"ABD", c:"+1", p:"911", a:"911", f:"911"},
+    {en:"Uruguay", tr:"Uruguay", c:"+598", p:"911", a:"911", f:"911"},
+    {en:"Uzbekistan", tr:"Özbekistan", c:"+998", p:"102", a:"103", f:"101"},
+    {en:"Vanuatu", tr:"Vanuatu", c:"+678", p:"111", a:"112", f:"113"},
+    {en:"Vatican City", tr:"Vatikan", c:"+39", p:"112", a:"112", f:"112"},
+    {en:"Venezuela", tr:"Venezuela", c:"+58", p:"911", a:"911", f:"911"},
+    {en:"Vietnam", tr:"Vietnam", c:"+84", p:"113", a:"115", f:"114"},
+    {en:"Yemen", tr:"Yemen", c:"+967", p:"194", a:"191", f:"191"},
+    {en:"Zambia", tr:"Zambiya", c:"+260", p:"999", a:"991", f:"993"},
+    {en:"Zimbabwe", tr:"Zimbabve", c:"+263", p:"995", a:"994", f:"993"}
+];
+
+function draw() {
+    const v1 = document.getElementById('i1').value.toLowerCase();
+    const v2 = document.getElementById('i2').value.toLowerCase();
+    const v3 = document.getElementById('i3').value.toLowerCase();
+    const b = document.getElementById('tb');
+    b.innerHTML = db.filter(u => {
+        const n = lang === 'en' ? u.en : u.tr;
+        return n.toLowerCase().includes(v1) && u.c.includes(v2) && (u.p.includes(v3) || u.a.includes(v3) || u.f.includes(v3));
+    }).map(u => `<tr><td><b>${lang === 'en' ? u.en : u.tr}</b></td><td><span class="b">${u.c}</span></td><td>${u.p || '-'}</td><td>${u.a || '-'}</td><td>${u.f || '-'}</td></tr>`).join('');
+}
+
+function toggle() {
+    lang = lang === 'en' ? 'tr' : 'en';
+    document.getElementById('t1').innerText = lang === 'en' ? "Global Emergency Numbers" : "Dünya Acil Durum Numaraları";
+    document.getElementById('t2').innerText = lang === 'en' ? "Full list of countries & codes" : "Tüm ülkeler ve kodların tam listesi";
+    document.getElementById('i1').placeholder = lang === 'en' ? "Search Country..." : "Ülke Ara...";
+    document.getElementById('th').innerHTML = lang === 'en' ? "<th>Country</th><th>Code</th><th>Police</th><th>Ambulance</th><th>Fire</th>" : "<th>Ülke</th><th>Kod</th><th>Polis</th><th>Ambulans</th><th>İtfaiye</th>";
+    draw();
+}
+
+document.querySelectorAll('input').forEach(i => i.addEventListener('input', draw));
+draw();
+</script>
+</body>
+</html>
