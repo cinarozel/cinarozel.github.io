@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>you are being directed...</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div id="message">This page has been closed, you are being redirected...</div>
+
+  <script>
+    const messages = [
+      {text: "This page has been closed, you are being redirected...", duration: 2500}, // İngilizce
+      {text: "Bu sayfa kapanmıştır, yönlendiriliyorsunuz...", duration: 1100}, // Türkçe
+      {text: "Cette page est fermée, redirection...", duration: 600}, // Fransızca
+      {text: "Diese Seite ist geschlossen, Sie werden weitergeleitet...", duration: 400} // Almanca
+    ];
+
+    let messageDiv = document.getElementById('message');
+    let totalTime = 0;
+
+    messages.forEach(msg => totalTime += msg.duration);
+
+    let current = 0;
+
+    function showNextMessage() {
+      if (current < messages.length) {
+        messageDiv.textContent = messages[current].text;
+        setTimeout(() => {
+          current++;
+          showNextMessage();
+        }, messages[current].duration);
+      }
+    }
+
+    showNextMessage();
+
+    // 5 saniye sonra yönlendir
+    setTimeout(() => {
+      window.location.href = "https://cinarozel.pages.dev";
+    }, 5000);
+  </script>
+</body>
+</html>
